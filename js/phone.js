@@ -16,19 +16,21 @@ function updatePhoneNumber (isIncrease){
 function updatePHoneTotalPrice(phoneInputCount ){
     const  showTotal= phoneInputCount * 1219;
     document.getElementById('phone-total').innerText = showTotal;
-    console.log(showTotal);
+    // console.log(showTotal);
 
 }
 
 document.getElementById('btn-phone-plus').addEventListener('click', function(){
   const phoneInputButton =  updatePhoneNumber(true)
   updatePHoneTotalPrice(phoneInputButton)
-//   console.log(phoneInputButton);
-//   const showTotal = phoneInputButton * 1219 ;
-//   console.log( showTotal);
+
+  calculateSubTotal()
+
+  
 })
 
 document.getElementById('btn-phone-min').addEventListener('click', function(){
     const phoneInputButton = updatePhoneNumber(false)
     updatePHoneTotalPrice(phoneInputButton)
+    calculateSubTotal()
 })

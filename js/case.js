@@ -18,6 +18,7 @@ document.getElementById("btn-case-plus").addEventListener("click", function () {
     const caseInputButton =  updateCaseNumber(true)
     const showTotal = caseInputButton * 59;
     document.getElementById("case-total").innerText = showTotal;
+    calculateSubTotal()
   
 });
 
@@ -26,4 +27,5 @@ document.getElementById('btn-case-min').addEventListener('click', function(){
    const caseInputButton = updateCaseNumber(false)
    const showTotal = caseInputButton * 59;
    document.getElementById("case-total").innerText = showTotal;
+   calculateSubTotal()
 })
