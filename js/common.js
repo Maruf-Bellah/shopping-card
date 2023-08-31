@@ -24,7 +24,29 @@ function calculateSubTotal(){
 
     const finalAmount = currentSubTotal + taxAmount;
     setTextElementValueById('final-total', finalAmount)
-}
+};
+
+
+document.getElementById('check-out').addEventListener('click', function(){
+    const phoneInput = document.getElementById("phone-input");
+    const phoneTotal = document.getElementById('phone-total');
+    const caseInput = document.getElementById("case-input-field");
+    const caseTotal = document.getElementById('case-total');
+    const subTotal = document.getElementById('sub-total');
+    const taxAmount = document.getElementById('tax-amount');
+    const total = document.getElementById('final-total');
+    phoneInput.value = 0;
+    phoneTotal.innerText = '00';
+    caseInput.value =0;
+    caseTotal.innerText= '00';
+    subTotal.innerText= '00'
+    taxAmount.innerText =0;
+    total.innerText = '00';
+
+    setTimeout(  alert('ধন্যবাদ আপনার কাছে প্রডাক্ট চলে যাবে', 2000))
+  
+    console.log(phoneTotal);
+})
 
 
 /* 
